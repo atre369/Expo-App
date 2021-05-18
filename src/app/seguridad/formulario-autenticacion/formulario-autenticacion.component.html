@@ -1,0 +1,30 @@
+<h3>{{accion}}</h3>
+<mat-divider></mat-divider>
+<app-mostrar-errores [errores]="errores"></app-mostrar-errores>
+
+<form (submit)="onSubmit.emit(form.value)" [formGroup]="form">
+    <!--Email-->
+    <mat-form-field appearance="outline" >
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput>
+        <mat-error>*{{obtenerMensajeErrorEmail()}}</mat-error>
+    </mat-form-field>
+    <!--Password-->
+    <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input [type]="hide ? 'password' : 'text' " formControlName="password" matInput placeholder="Ingresa tu contraseña">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-error>*El campo Password es requerido</mat-error>
+    </mat-form-field>
+    <!--Botones-->
+    <div class="contenedor-botones">
+        <button mat-flat-button (click)="openSnackBar('Procesando')" color="primary" [disabled]="form.invalid">
+            {{accion}}
+        </button>
+        
+        <a mat-stroked-button routerLink="/">
+            Cancelar
+        </a>
+    </div>
+    
+</form>
