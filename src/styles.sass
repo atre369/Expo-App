@@ -1,1 +1,137 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"
+
+//FUENTES TIPOGRAFICAS
+$font-stack: 'Montserrat', sans-serif
+    
+.mat-toolbar button
+    font-family: $font-stack
+
+.mat-nav-list a
+    font-family: $font-stack
+
+.mat-form-field 
+    font-family: $font-stack
+
+.contenedor-botones button
+    font-family: $font-stack
+
+.contenedor-botones a
+    font-family: $font-stack
+
+
+//TAMAÑO Y POSICIÓN DE VISTA
+$view-screen: 100vh
+
+*
+    box-sizing: border-box
+
+body
+    margin: 0
+
+.mat-drawer-container
+    display: flex
+
+.mat-sidenav-container
+    height: $view-screen
+
+//BARRA DE NAVEGACIÓN
+.mat-toolbar
+    display: flex
+    position: sticky
+    position: -webkit-sticky
+    top: 0
+    z-index: 1000
+    box-shadow: 2px 2px 6px rgb(0, 0, 0)
+
+.espacio
+    flex: 1 1 auto
+
+.es-celular .miToolbar
+    position: fixed
+    z-index: 2
+
+//FONDO
+img
+    width: 100%
+    height: 100%
+    margin: 0 auto
+    position: absolute
+
+//FORMULARIOS
+
+$primary-color: #584e58
+
+.form-footer p
+    padding-left: 3vh
+
+.form-flotante
+    width: 70vh
+    height: 70vh
+    background-color: $primary-color
+    border: 0px solid #000000
+    border-radius: 40px 40px 
+    box-shadow: 6px 6px 20px #000000
+    margin: 0 auto
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flexbox
+
+form
+    margin-left: 3vh
+    margin-right: 3vh
+
+h3
+    text-align: center
+
+.columna
+    width: 100vh
+    height: 100% !important
+    background-color: $primary-color
+    margin: 0 auto
+    position: absolute
+    left: 50%
+    transform: translate(-50%)
+    display: flexbox
+
+.mat-form-field
+    width: 100%
+
+.contenedor-botones
+    width: 100%
+    display: inline-block
+
+a
+    display: inline-block
+    width: 48%
+    float: right    
+
+button
+    display: inline-block
+    width: 48%
+    float: left
+
+///import css-variables from 
+
+.temporizador
+    margin: 0 auto
+    display: flexbox
+
+.temporizador-salon1
+    position: absolute
+    top: 10%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.temporizador-salon2
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.temporizador-salon3
+    position: absolute
+    top: 70%
+    left: 50%
+    transform: translate(-50%, -50%)
